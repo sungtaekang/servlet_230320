@@ -13,6 +13,8 @@ public class GetMethodEx03 extends HttpServlet{
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		// test code
+		
 		// 한글 깨짐 방지
 		response.setContentType("text/json");
 		response.setCharacterEncoding("utf-8");
