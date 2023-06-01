@@ -12,15 +12,20 @@
 </head>
 <body>
 	<div class="container">
-	<h1>체격 조건 입력</h1>
-		<form method="get" action="/lesson02/quiz03_1.jsp">
-			<div class="d-flex form-group align-items-end">
-				<input type="text" name="height" class="form-control col-2" placeholder="키를 입력하세요.">
-				<span class="ml-1 mr-1">cm</span>
-				<input type="text" name="weight" class="form-control col-2" placeholder="몸무게를 입력하세요.">
-				<span class="ml-1 mr-3">kg</span>
-				<input type="submit" class="btn btn-info" value="계산">
+		<h1>길이 전환</h1>
+		<form method="post" action="/lesson02/quiz04_1.jsp">
+			<div class="d-flex align-items-end">
+				<input type="text" name="box" class="form-control col-2 mr-1">cm
 			</div>
+			
+			<div>
+			<label>인치<input type="checkbox" name="unit" value="inch"></label>
+			<label>야드<input type="checkbox" name="unit" value="yard"></label>
+			<label>피트<input type="checkbox" name="unit" value="feet"></label>
+			<label>미터<input type="checkbox" name="unit" value="meter"></label><br>
+			</div>
+			
+			<button type="submit" class="form-control btn-success col-1">변환하기</button>
 		</form>
 	</div>
 </body>
