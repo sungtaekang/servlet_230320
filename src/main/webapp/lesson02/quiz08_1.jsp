@@ -60,6 +60,7 @@ list.add(map);
 %>
 	<div class="container d-flex">
 		<%
+		// id로 할때 Integer.parseInt로 인트값으로 변환해서 받기
 		String title = request.getParameter("title");
 		
 		Iterator<Map<String, Object>> iter = list.iterator();
@@ -70,10 +71,11 @@ list.add(map);
 			if (title.equals(books.get("title"))) {
 		%>
 		<article class="col-6">
-			<img src="<%= books.get("image") %>" class="w-100">
+			<img src="<%= books.get("image") %>" alt="책 표지" class="w-100">
 		</article>
 			<div class="col-6">
-				<div class="display-2"><%= books.get("title") %></div>		
+			 <!-- span 태그로 하고싶다면 d-block 속성 넣기. -->
+				<div class="display-1 font-weight-bold"><%= books.get("title") %></div>		
 				<div class="display-3 text-info"><%= books.get("author") %></div>
 				<div class="display-4 text-gray"><%= books.get("publisher") %></div>
 			</div>
@@ -82,7 +84,6 @@ list.add(map);
 			}
 		}
 		%>
-		
 	</div>
 </body>
 </html>
