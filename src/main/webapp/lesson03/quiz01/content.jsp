@@ -53,10 +53,12 @@
 		<tbody>
 		<%
 		Iterator<Map<String, String>> iter = list.iterator();
-		String content = request.getParameter("content");
+		String content = request.getParameter("content"); // null(전체) 또는 카테고리
 		
 		while(iter.hasNext()) {
 			Map<String,String> data = iter.next();
+			// 카테고리가 null일 때(전체)  또는	 카테고리명이 일치할 때
+			if (content == null || content.equals(data.get("category"))) {
 		%>
 			<tr>
 				<td><%= data.get("ch") %></td>
@@ -65,6 +67,7 @@
 			</tr>
 		<%
 			}
+		}
 		%>
 		</tbody>
 	</table>
