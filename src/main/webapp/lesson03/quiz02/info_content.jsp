@@ -106,7 +106,7 @@
 				</div>
 				<div class="ml-4">
 					<div><%= item.get("album") %></div>
-					<div><%= (int)item.get("time") / 60%> : <%= (int)item.get("time") % 60 %></div>
+					<div><%= (int)item.get("time") / 60 %> : <%= (int)item.get("time") % 60 %></div>
 					<div><%= item.get("composer") %></div>
 					<div><%= item.get("lyricist") %></div>
 				</div>
